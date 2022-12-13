@@ -1,5 +1,3 @@
-
-
 const ajvInstance = require('./ajv-instance');
 
    const schema = {
@@ -13,7 +11,7 @@ const ajvInstance = require('./ajv-instance');
         enum: ['US', 'CA'],
       },
     },
-    required: ['firstName', 'email', 'dob', 'countryCode'],
+    required: ['firstName', 'email','dob', 'countryCode'],
   };
   
   module.exports = ajvInstance.compile(schema);

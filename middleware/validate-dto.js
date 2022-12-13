@@ -1,6 +1,7 @@
 function validateDto(ajvValidate) {
     return (req, res, next) => {
-      const valid = ajvValidate(req.body);
+      const valid = ajvValid
+      ate(req.body);
       if (!valid) {
         // it is imperative that the reference to the errors is copied
         // the next time ajv runs the errors object could be overridden
@@ -15,6 +16,7 @@ function validateDto(ajvValidate) {
         const errors = ajvValidate.errors;
         res.status(400).json(errors);
       }
+      console.log(valid)
       next();
     };
   }
